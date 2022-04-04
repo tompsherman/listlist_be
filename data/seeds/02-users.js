@@ -3,9 +3,9 @@
  * @returns { Promise<void> }
  */
 exports.seed = async function (knex) {
-  return knex("users").insert([
-    { id: 1, email: "mainTESTemail@gmail.com" },
-    { id: 2, email: "TESTEMAIL2@gmail.com" },
-    { id: 3, email: "testemail3@gmail.com" },
+  await knex("users").insert([
+    { user_id: 1, email: "mainTESTemail@gmail.com", paid_user: true },
+    { user_id: 2, email: "TESTEMAIL2@gmail.com", paid_user: false },
+    { user_id: 3, email: "testemail3@gmail.com", paid_user: true },
   ]);
 };

@@ -24,7 +24,7 @@ router.get("/", (req, res) => {
 // @route		GET /:id
 router.get("/:id", (req, res) => {
   const { id } = req.params;
-  console.log(id);
+  // console.log("List router," id);
   List.getCurrentList(id)
     .then((list) => {
       if (list) {

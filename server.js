@@ -19,6 +19,6 @@ server.use(express.json());
 server.use("/api/users", userRouter);
 server.use("/api/lists", listRouter);
 server.use("/api/items", itemRouter);
-server.use("/api/listItems", listItemRouter);
+server.use("/api/list_items", listItemRouter);
 
 module.exports = server;

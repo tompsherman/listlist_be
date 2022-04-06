@@ -7,16 +7,18 @@ exports.seed = async function (knex) {
     {
       list_id: 1,
       created_timestamp: "March 4",
-      list_open: false,
+      list_open: true,
       type: "grocery",
-      purchased_timestamp: "March 5",
+      purchased_timestamp: "",
+      starred_list: "*",
     },
     {
       list_id: 2,
-      created_timestamp: "April 2",
+      created_timestamp: "",
       list_open: true,
-      type: "grocery",
-      purchased_timestamp: null,
+      type: "pantry",
+      purchased_timestamp: "",
+      starred_list: "",
     },
   ]);
 };

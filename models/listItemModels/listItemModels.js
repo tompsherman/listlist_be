@@ -3,12 +3,18 @@ const db = require("../../data/db-config");
 module.exports = {
   //function names:
   find,
+  addListItem,
   getCurrentList,
 };
 
 //functions:
 function find() {
   return db("list_items");
+}
+
+function addListItem(listItem) {
+  console.log("listItem Model:", listItem);
+  return db("list_items").insert(listItem);
 }
 
 function getCurrentList(list_id) {

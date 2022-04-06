@@ -25,7 +25,17 @@ router.get("/", (req, res) => {
 router.get("/:id", (req, res) => {});
 // @desc		Add a new Item
 // @route		POST /
-router.post("/", (req, res) => {});
+router.post("/", (req, res) => {
+  const itemData = req.body;
+  console.log("ITEM router", itemData);
+  Item.addItem(itemData)
+    .then((item) => {
+      res.status(201).json(item);
+    })
+    .catch((error) =>
+      res.status(500).json({ message: `${error.message}; ${error.stack}` })
+    );
+});
 // @desc		Update a Item by id
 // @route		PUT /:id
 router.put("/:id", (req, res) => {});

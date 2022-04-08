@@ -9,7 +9,6 @@ exports.seed = async function (knex) {
       created_timestamp: "March 4",
       list_open: true,
       type: "grocery",
-      purchased_timestamp: "",
       starred_list: "*",
     },
     {
@@ -17,7 +16,6 @@ exports.seed = async function (knex) {
       created_timestamp: "",
       list_open: true,
       type: "pantry",
-      purchased_timestamp: "",
       starred_list: "",
     },
   ]);

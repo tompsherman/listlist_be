@@ -12,6 +12,6 @@ function find() {
 }
 
 function addItem(item) {
-  console.log("ITEM model: item", item);
+  // console.log("ITEM model: item", item);
   return db("items").insert(item);
 }

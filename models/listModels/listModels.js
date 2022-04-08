@@ -3,12 +3,18 @@ const db = require("../../data/db-config");
 module.exports = {
   //function names:
   find,
+  newList,
   getCurrentList,
 };
 
 //functions:
 function find() {
   return db("lists");
+}
+
+function newList(newList) {
+  // console.log("IN MODEL:", newList);
+  return db("lists").insert(newList);
 }
 
 function getCurrentList(list_id) {
@@ -26,6 +32,7 @@ function getCurrentList(list_id) {
       "li.list_item_id",
       "li.desired_amount",
       "li.acquired_amount",
+      "li.purchase_date",
       "l.list_open"
     )
     .join("list_items AS li", "l.list_id", "li.list_id")

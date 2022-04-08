@@ -43,7 +43,6 @@ exports.up = function (knex) {
       table.string("created_timestamp", 128).notNullable();
       table.boolean("list_open").notNullable();
       table.string("type", 128).notNullable();
-      table.string("purchased_timestamp", 128);
       table.string("starred_list", 1);
     })
     .createTable("pod_lists", (table) => {
@@ -94,6 +93,7 @@ exports.up = function (knex) {
       table.integer("desired_amount").notNullable();
       table.integer("acquired_amount");
       table.decimal("amount_left");
+      table.string("purchase_date", 128);
     })
     .createTable("steps", (table) => {
       table.increments("step_id");

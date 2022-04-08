@@ -40,5 +40,17 @@ exports.seed = async function (knex) {
       cost: 4.5,
       storage_space: "counter",
     },
+    {
+      item_id: 4,
+      name: "rice",
+      purchase_unit: "5 lb bag",
+      use_unit: "1/16 bulb",
+      category: "grains",
+      perishable: true,
+      time_to_expire: "2 months",
+      priority: 2,
+      cost: 4.5,
+      storage_space: "counter",
+    },
   ]);
 };

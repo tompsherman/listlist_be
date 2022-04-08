@@ -39,7 +39,16 @@ router.get("/:id", (req, res) => {
 });
 // @desc		Add a new List
 // @route		POST /
-router.post("/", (req, res) => {});
+router.post("/", (req, res) => {
+  const listInfo = req.body;
+  List.newList(listInfo)
+    .then((list) => {
+      res.status(201).json(list);
+    })
+    .catch((error) =>
+      res.status(500).json({ message: `${error.message}; ${error.stack}` })
+    );
+});
 // @desc		Update a List by id
 // @route		PUT /:id
 router.put("/:id", (req, res) => {});

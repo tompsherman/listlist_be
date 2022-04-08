@@ -50,6 +50,19 @@ router.post("/", (req, res) => {
       res.status(500).json({ message: `${error.message}; ${error.stack}` })
     );
 });
+// @desc		Add a new bulk addition
+// @route		POST /bulk_add
+router.post("/bulk_add", (req, res) => {
+  const bulkList = req.body;
+  console.log("BULK LIST router:", bulkList);
+  ListItem.addBulkListItem(bulkList)
+    .then((bulkItems) => {
+      res.status(201).json(bulkItems);
+    })
+    .catch((error) =>
+      res.status(500).json({ message: `${error.message}; ${error.stack}` })
+    );
+});
 // @desc		Update a ListItem by id
 // @route		PUT /:id
 router.put("/:id", (req, res) => {});

@@ -5,6 +5,7 @@ module.exports = {
   find,
   addListItem,
   getCurrentList,
+  addBulkListItem,
 };
 
 //functions:
@@ -35,4 +36,17 @@ function getCurrentList(list_id) {
     .join("items AS i", "li.item_id", "li.item_id")
     .where("l.list_id", "=", list_id)
     .first();
+}
+
+function addBulkListItem(bulkList) {
+  // console.log("listItem Model:", bulkList);
+  const insertList = bulkList.map((element) => ({
+    list_id: element.list_id,
+    item_id: element.item_id,
+    desired_amount: element.desired_amount,
+    acquired_amount: element.acquired_amount,
+    amount_left: element.amount_left,
+  }));
+  console.log("models", insertList);
+  return db("list_items").insert(insertList);
 }

@@ -94,6 +94,7 @@ exports.up = function (knex) {
       table.integer("acquired_amount");
       table.decimal("amount_left");
       table.string("purchase_date", 128);
+      table.string("purchase_year", 4);
     })
     .createTable("steps", (table) => {
       table.increments("step_id");

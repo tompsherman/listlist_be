@@ -46,6 +46,7 @@ function addBulkListItem(bulkList) {
     desired_amount: element.desired_amount,
     acquired_amount: element.acquired_amount,
     amount_left: element.amount_left,
+    purchase_date: element.purchase_date,
   }));
   console.log("models", insertList);
   return db("list_items").insert(insertList);

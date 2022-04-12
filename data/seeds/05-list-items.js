@@ -12,6 +12,7 @@ exports.seed = async function (knex) {
       acquired_amount: 0,
       amount_left: 0,
       purchase_date: "",
+      purchase_year: "",
     },
     {
       list_item_id: 2,
@@ -21,6 +22,7 @@ exports.seed = async function (knex) {
       acquired_amount: 0,
       amount_left: 0,
       purchase_date: "",
+      purchase_year: "",
     },
     {
       list_item_id: 3,
@@ -30,6 +32,7 @@ exports.seed = async function (knex) {
       acquired_amount: 0,
       amount_left: 0,
       purchase_date: "",
+      purchase_year: "",
     },
     {
       list_item_id: 4,
@@ -39,6 +42,7 @@ exports.seed = async function (knex) {
       acquired_amount: 5,
       amount_left: 5,
       purchase_date: "March 28",
+      purchase_year: "2022",
     },
     {
       list_item_id: 5,
@@ -48,6 +52,7 @@ exports.seed = async function (knex) {
       acquired_amount: 0,
       amount_left: 0,
       purchase_date: "",
+      purchase_year: "",
     },
   ]);
 };

@@ -41,6 +41,7 @@ router.get("/:id", (req, res) => {
 // @route		POST /
 router.post("/", (req, res) => {
   const listInfo = req.body;
+  console.log("new list router::", listInfo);
   List.newList(listInfo)
     .then((list) => {
       res.status(201).json(list);

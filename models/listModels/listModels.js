@@ -13,7 +13,7 @@ function find() {
 }
 
 function newList(newList) {
-  // console.log("IN MODEL:", newList);
+  console.log("IN MODEL:", newList);
   return db("lists").insert(newList);
 }
 

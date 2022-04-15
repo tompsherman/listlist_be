@@ -18,7 +18,7 @@ function newList(newList) {
 }
 
 function getCurrentList(list_id) {
-  // console.log("LIST model", list_id);
+  console.log("LIST model", list_id);
   return db("lists as l")
     .select(
       "l.list_id",

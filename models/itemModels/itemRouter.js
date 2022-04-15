@@ -14,7 +14,7 @@ router.get("/test", (req, res) => {
 router.get("/", (req, res) => {
   Item.find()
     .then((items) => {
-      res.status(200).json(items);
+      console.log(items), res.status(200).json(items);
     })
     .catch((error) =>
       res.status(500).json({ message: `${error.message}; ${error.stack}` })

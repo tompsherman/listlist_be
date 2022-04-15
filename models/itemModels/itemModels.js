@@ -8,6 +8,7 @@ module.exports = {
 
 //functions:
 function find() {
+  console.log("get items MODEL db", db("items"));
   return db("items");
 }
 

@@ -16,6 +16,8 @@ server.use(morgan("dev"));
 server.use(cors());
 server.use(express.json());
 
+console.log("SERVER GOT PINGED");
+
 server.use("/api/users", userRouter);
 server.use("/api/lists", listRouter);
 server.use("/api/items", itemRouter);

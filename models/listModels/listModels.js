@@ -32,6 +32,7 @@ function getCurrentList(list_id) {
       "i.cost",
       "li.list_item_id",
       "li.desired_amount",
+      "i.use_unit",
       "li.acquired_amount",
       "li.purchase_date",
       "l.list_open"

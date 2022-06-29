@@ -28,6 +28,7 @@ function getCurrentList(list_id) {
       "i.category",
       "l.type",
       "i.priority",
+      "i.time_to_expire",
       "i.cost",
       "li.list_item_id",
       "li.desired_amount",

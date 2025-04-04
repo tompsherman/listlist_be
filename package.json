@@ -23,7 +23,6 @@
     "nodemon": "^2.0.22"
   },
   "dependencies": {
-    "@vscode/sqlite3": "^5.0.8",
     "colors": "^1.4.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.0",

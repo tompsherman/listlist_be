@@ -6,6 +6,8 @@
   "scripts": {
     "server": "nodemon index.js",
     "start": "node index.js",
+    "migrate": "knex migrate:latest --env production",
+    "migrate:dev": "knex migrate:latest --env development",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

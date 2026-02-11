@@ -38,7 +38,23 @@ router.post("/", (req, res) => {
 });
 // @desc		Update a Item by id
 // @route		PUT /:id
-router.put("/:id", (req, res) => {});
+router.put("/:id", (req, res) => {
+  const { id } = req.params;
+  const changes = req.body;
+  console.log("PUT /items/:id", id, changes);
+  
+  Item.updateItem(id, changes)
+    .then((updatedItem) => {
+      if (updatedItem) {
+        res.status(200).json(updatedItem);
+      } else {
+        res.status(404).json({ message: "Item not found" });
+      }
+    })
+    .catch((error) =>
+      res.status(500).json({ message: `${error.message}; ${error.stack}` })
+    );
+});
 // @desc		Remove a Item by id
 // @route		DELETE /:id
 router.delete("/:id", (req, res) => {});
